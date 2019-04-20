@@ -1,5 +1,6 @@
 {
-  "host": "https://stark-wave-24634.herokuapp.com",
+  "host": "localhost",
+  "port": 3030,
   "public": "../public/",
   "paginate": {
     "default": 10,
@@ -17,7 +18,7 @@
       "header": {
         "typ": "access"
       },
-      "audience": "https://stark-wave-24634.herokuapp.com",
+      "audience": "localhost",
       "subject": "anonymous",
       "issuer": "feathers",
       "algorithm": "HS256",
@@ -29,6 +30,5 @@
       "passwordField": "password"
     }
   },
-  "nedb": "../data",
-  "mongodb": "mongodb://admin:40922q40922@ds133256.mlab.com:33256/chat"
+  "nedb": "../data"
 }

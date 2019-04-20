@@ -1,0 +1,34 @@
+{
+  "host": "https://stark-wave-24634.herokuapp.com",
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "secret": "31f2fe725d9f9639aa576b8977edf80501625a70ccbaeb9c034172646a2e2b6e3f32356bf2374d1d9ccff1d2d045ab11c7c4dea8ef66df38215bb83a2745ae6825fd2335766019ca73660fffa8049da04dd5caf717c93a613046b9739054da47d131d8cd4dbb4d7700c68400605048c521d48e2dff2b2a1f998d28a67c4dca06d3a6e24ce78c5a0729bc774df572ff313ad25dac1a4b9787e91f8aab1e7698ca710988f81be3e96ea3d61ff1ac7f0cf1b15fdac93056788c0ab45256dc34e618e93f004ae7a3c66675fb9b8692cc694455c84bf9f31bde0c94fa43d75b308f8ed351f56bfef9d9abb31760c55a105e2ad4690abbf87fd49af1f0339d60ecd0e2",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://stark-wave-24634.herokuapp.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "nedb": "../data",
+  "mongodb": "mongodb://admin:40922q40922@ds133256.mlab.com:33256/chat"
+}
